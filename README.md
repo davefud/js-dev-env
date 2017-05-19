@@ -1,5 +1,5 @@
-[![Travis CI Tests][travis-tests]][travis-tests-url]
-[![AppVeyor Tests][appveyor-tests-url]][appveyor-tests-url]
+[![Travis Build Status][travis-tests]][travis-tests-url]
+[![AppVeyor Build Status][appveyor-tests-url]][appveyor-tests-url]
 
 ## Synopsis
 
@@ -55,9 +55,6 @@ This will run the automated build process, start up a webserver, and open the ap
 | webpack-dev-middleware      | Adds middleware support to webpack                                                                        |
 | webpack-hot-middleware      | Adds hot reloading to webpack                                                                             |
 
-
-
-[travis-tests]: http://img.shields.io/travis/webpack/webpack-dev-middleware.svg
+[travis-tests]: https://travis-ci.org/davefud/js-dev-env.svg?branch=master
 [travis-tests-url]: https://travis-ci.org/davefud/js-dev-env
-[appveyor-tests-url]: https://ci.appveyor.com/api/projects/status/github/davefud/js-dev-env?branch=develop&svg=true
-
+[appveyor-tests-url]: https://ci.appveyor.com/api/projects/status/github/davefud/js-dev-env?branch=master&svg=true
