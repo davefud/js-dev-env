@@ -1,5 +1,5 @@
 [![Travis Build Status][travis-tests]][travis-tests-url]
-[![AppVeyor Build Status][appveyor-tests-url]][appveyor-tests-url]
+[![AppVeyor Build Status][appveyor-tests]][appveyor-tests-url]
 
 ## Synopsis
 
@@ -57,4 +57,6 @@ This will run the automated build process, start up a webserver, and open the ap
 
 [travis-tests]: https://travis-ci.org/davefud/js-dev-env.svg?branch=master
 [travis-tests-url]: https://travis-ci.org/davefud/js-dev-env
-[appveyor-tests-url]: https://ci.appveyor.com/api/projects/status/github/davefud/js-dev-env?branch=master&svg=true
+[appveyor-tests]: https://ci.appveyor.com/api/projects/status/github/davefud/js-dev-env?branch=master&svg=true
+[appveyor-tests-url]: https://ci.appveyor.com/project/davefud/js-dev-env
+
