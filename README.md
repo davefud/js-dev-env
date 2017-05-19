@@ -1,4 +1,5 @@
 [![tests][tests]][tests-url]
+[https://ci.appveyor.com/api/projects/status/github/js-dev-env?svg=true](https://ci.appveyor.com/api/projects/status/github/js-dev-env?svg=true)
 
 ## Synopsis
 
