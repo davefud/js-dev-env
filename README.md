@@ -1,7 +1,4 @@
-[![Travis Build Status][travis-tests]][travis-tests-url]
-[![AppVeyor Build Status][appveyor-tests]][appveyor-tests-url]
-
-# JavaScript Development Environment
+# JavaScript Development Environment [![Travis Build Status][travis-tests]][travis-tests-url] [![AppVeyor Build Status][appveyor-tests]][appveyor-tests-url]
 
 ## Synopsis
 
