@@ -1,6 +1,8 @@
 [![Travis Build Status][travis-tests]][travis-tests-url]
 [![AppVeyor Build Status][appveyor-tests]][appveyor-tests-url]
 
+# JavaScript Development Environment
+
 ## Synopsis
 
 This is a generic JavaScript development environment and isn't tied to any specific JS framework.
