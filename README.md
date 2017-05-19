@@ -1,5 +1,5 @@
 [![tests][tests]][tests-url]
-<img src="https://ci.appveyor.com/api/projects/status/github/js-dev-env?svg=true" alt="AppVeyor Project Badge">
+<img src="https://ci.appveyor.com/api/projects/status/github/js-dev-env?branch=develop&svg=true" alt="AppVeyor Project Badge">
 
 ## Synopsis
 
