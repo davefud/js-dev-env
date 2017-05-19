@@ -1,5 +1,5 @@
 [![tests][tests]][tests-url]
-[https://ci.appveyor.com/api/projects/status/github/js-dev-env?svg=true](https://ci.appveyor.com/api/projects/status/github/js-dev-env?svg=true)
+<img src="https://ci.appveyor.com/api/projects/status/github/js-dev-env?svg=true" alt="AppVeyor Project Badge">
 
 ## Synopsis
 
@@ -35,3 +35,5 @@ A short snippet describing the license (MIT, Apache, etc.)
 
 [tests]: http://img.shields.io/travis/webpack/webpack-dev-middleware.svg
 [tests-url]: https://travis-ci.org/davefud/js-dev-env
+
+
