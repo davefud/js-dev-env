@@ -1,39 +1,63 @@
-[![tests][tests]][tests-url]
-[![tests][appveyor-tests-url]][appveyor-tests-url]
+[![Travis CI Tests][travis-tests]][travis-tests-url]
+[![AppVeyor Tests][appveyor-tests-url]][appveyor-tests-url]
 
 ## Synopsis
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+This is a generic JavaScript development environment and isn't tied to any specific JS framework.
 
-## Code Example
+## Get Started
 
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+1. **Install [Node 6](https://nodejs.org)**. Need to run multiple versions of Node? Use [nvm](https://github.com/creationix/nvm) or [nvm-windows](https://github.com/coreybutler/nvm-windows)
+2. **Clone this repository.** - `git clone https://github.com/davefud/js-dev-env.git` or [download the zip](https://github.com/davefud/js-dev-env/archive/master.zip)
+3. **Make sure you're in the directory you just created.** - `cd js-dev-env`
+4. **Install Node Packages.** - `npm install`
+5. **Run the app.** - `npm start -s`
+This will run the automated build process, start up a webserver, and open the application in your default browser. When doing development with this kit, this command will continue watching files all your files. Every time you hit save the code is rebuilt, linting runs, and tests run automatically. Note: The -s flag is optional. It enables silent mode which suppresses unnecessary messages during the build.
+6. Having issues? See below.
 
-## Motivation
+## Having Issues? Try these things first:
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+1. Run `npm install` - If you forget to do this, you'll see this: `babel-node: command not found`.
+2. Make sure you're running the latest version of Node. Or, use [Node 6.9.1](https://nodejs.org/en/download/releases/) if you're having issues on Windows. Node 7 has issues on some Windows machines.
+3. Make sure files with names that begin with a dot (.babelrc, .editorconfig, .eslintrc) are copied to the project directory root. This is easy to overlook if you copy this repository manually.
+4. Don't run the project from a symbolic link. It will cause issues with file watches.
+5. Having linting issues? Delete any .eslintrc that you're storing in your user directory. Also, disable any ESLint plugin / custom rules that you've enabled within your editor. These will conflict with the ESLint rules defined in the course.
+6. Nothing above work? Delete your node_modules folder and re-run npm install.
 
-## Installation
+### Development Dependencies
 
-Provide code examples and explanations of how to get the project.
+| **Dependency**              | **Use**                                                                                                   |
+| --------------------------- | --------------------------------------------------------------------------------------------------------- |
+| babel-cli                   | Babel Command line interface                                                                              |
+| babel-core                  | Babel Core for transpiling the new JavaScript to old                                                      |
+| babel-loader                | Adds Babel support to Webpack                                                                             |
+| babel-preset-latest         | Babel preset for running all the latest standardized JavaScript features                                  |
+| babel-register              | Register Babel to transpile our Mocha tests                                                               |
+| cheerio                     | Supports querying DOM with jQuery like syntax - Useful in testing and build process for HTML manipulation |
+| cross-env                   | Cross-environment friendly way to handle environment variables                                            |
+| css-loader                  | Add CSS support to Webpack                                                                                |
+| eslint                      | Lints JavaScript                                                                                          |
+| eslint-plugin-import        | Advanced linting of ES6 imports                                                                           |
+| eslint-watch                | Add watch functionality to ESLint                                                                         |
+| eventsource-polyfill        | Polyfill to support hot reloading in IE                                                                   |
+| expect                      | Assertion library for use with Mocha                                                                      |
+| express                     | Serves development and production builds                                                                  |
+| extract-text-webpack-plugin | Extracts CSS into separate file for production build                                                      |
+| file-loader                 | Adds file loading support to Webpack                                                                      |
+| jsdom                       | In-memory DOM for testing                                                                                 |
+| mocha                       | JavaScript testing library                                                                                |
+| npm-run-all                 | Display results of multiple commands on single command line                                               |
+| open                        | Open app in default browser                                                                               |
+| rimraf                      | Delete files                                                                                              |
+| style-loader                | Add Style support to Webpack                                                                              |
+| url-loader                  | Add url loading support to Webpack                                                                        |
+| webpack                     | Bundler with plugin system and integrated development server                                              |
+| webpack-dev-middleware      | Adds middleware support to webpack                                                                        |
+| webpack-hot-middleware      | Adds hot reloading to webpack                                                                             |
 
-## API Reference
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
-## Tests
-
-Describe and show how to run the tests with code examples.
-
-## Contributors
-
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
-
-## License
-
-A short snippet describing the license (MIT, Apache, etc.)
-
-[tests]: http://img.shields.io/travis/webpack/webpack-dev-middleware.svg
-[tests-url]: https://travis-ci.org/davefud/js-dev-env
+[travis-tests]: http://img.shields.io/travis/webpack/webpack-dev-middleware.svg
+[travis-tests-url]: https://travis-ci.org/davefud/js-dev-env
 [appveyor-tests-url]: https://ci.appveyor.com/api/projects/status/github/davefud/js-dev-env?branch=develop&svg=true
 
