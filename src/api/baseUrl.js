@@ -1,11 +1,20 @@
 /*
-  Handles pointing the baseUrl for the app and according to
-  the environment. This means in dev environment it will
-  point to the mock API, but will point to the real API
-  if the hostname is other than localhost.
+  Handles pointing the baseUrl for the app to the mock API or the real api
+  being served by express. If the url contains the parameter 'useMockApi'
+  then it will use the mock API, otherwise it will use the real API.
 */
 
 export default function getBaseUrl() {
-  const inDevelopment = window.location.hostname === 'localhost';
-  return inDevelopment ? 'http://localhost:3001/' : '/';
+  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : '/';
+}
+
+function getQueryStringParameterByName(name, url) {
+  if (!url) url = window.location.href;
+
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
