@@ -23,7 +23,6 @@ function del(url) {
 
   return fetch(request).then(onSuccess, onError);
 }
-
 // TODO: Add support for put and post
 
 function onSuccess(response) {
