@@ -8,7 +8,7 @@ describe('First test', () => {
   });
 });
 
-// Sillt unit test, but is an example of working with JSDom
+// Silly unit test, but is an example of working with JSDom
 describe('index.html', () => {
   it('should have H1 that says Users', (done) => {
     const index = fs.readFileSync('./src/index.html', "utf-8");
